@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ElectroIoT - AI Illustration
+  Layered neural network with travelling activations, a prompt/inference console
+  and a confidence meter.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="440" height="280"
+     role="img" aria-label="Artificial intelligence and automation illustration">
+  <title>AI &#183; Machine Learning &#183; Automation</title>
+
+  <defs>
+    <linearGradient id="aCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="aEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0066FF"/>
+      <stop offset="100%" stop-color="#00FFD5"/>
+    </linearGradient>
+    <linearGradient id="aMeter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#0066FF"/>
+      <stop offset="60%"  stop-color="#00C8FF"/>
+      <stop offset="100%" stop-color="#00FFD5"/>
+    </linearGradient>
+    <radialGradient id="aCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00FFD5" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="aGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" width="436" height="276" rx="18" fill="url(#aCard)"
+        stroke="url(#aEdge)" stroke-width="1.6"/>
+  <rect x="2" y="2" width="436" height="276" rx="18" fill="none"
+        stroke="#0066FF" stroke-opacity="0.18" stroke-width="6" filter="url(#aGlow)"/>
+
+  <text x="24" y="42" font-family="'Segoe UI',system-ui,sans-serif" font-size="18"
+        font-weight="800" fill="#EAF6FF">AI <tspan fill="#00C8FF">Engineering</tspan></text>
+  <text x="24" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        font-weight="600" letter-spacing="1.8" fill="#00C8FF" opacity="0.75">
+    LLM &#183; VISION &#183; PREDICTIVE AUTOMATION
+  </text>
+
+  <!-- Network core glow -->
+  <ellipse cx="240" cy="168" rx="150" ry="82" fill="url(#aCore)" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Synapses -->
+  <g stroke="#0066FF" stroke-opacity="0.45" stroke-width="1">
+    <line x1="120" y1="120" x2="200" y2="102"/><line x1="120" y1="120" x2="200" y2="152"/>
+    <line x1="120" y1="120" x2="200" y2="202"/><line x1="120" y1="168" x2="200" y2="102"/>
+    <line x1="120" y1="168" x2="200" y2="152"/><line x1="120" y1="168" x2="200" y2="202"/>
+    <line x1="120" y1="216" x2="200" y2="102"/><line x1="120" y1="216" x2="200" y2="152"/>
+    <line x1="120" y1="216" x2="200" y2="202"/>
+    <line x1="200" y1="102" x2="286" y2="126"/><line x1="200" y1="102" x2="286" y2="186"/>
+    <line x1="200" y1="152" x2="286" y2="126"/><line x1="200" y1="152" x2="286" y2="186"/>
+    <line x1="200" y1="202" x2="286" y2="126"/><line x1="200" y1="202" x2="286" y2="186"/>
+    <line x1="286" y1="126" x2="368" y2="156"/><line x1="286" y1="186" x2="368" y2="156"/>
+  </g>
+
+  <!-- Activations -->
+  <g fill="#00FFD5" filter="url(#aGlow)">
+    <circle r="2.6"><animateMotion path="M120 120 L200 152 L286 126 L368 156" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite"/></circle>
+    <circle r="2.6"><animateMotion path="M120 216 L200 102 L286 186 L368 156" dur="3.6s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="3.6s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle r="2.6"><animateMotion path="M120 168 L200 202 L286 126 L368 156" dur="3.3s" begin="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="3.3s" begin="1.7s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Neurons -->
+  <g fill="#050816" stroke="#00C8FF" stroke-width="1.8" filter="url(#aGlow)">
+    <circle cx="120" cy="120" r="7"><animate attributeName="r" values="7;8.6;7" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="168" r="7"><animate attributeName="r" values="7;8.6;7" dur="3s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="216" r="7"><animate attributeName="r" values="7;8.6;7" dur="3s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="102" r="8"><animate attributeName="r" values="8;9.6;8" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="152" r="8"><animate attributeName="r" values="8;9.6;8" dur="3s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="202" r="8"><animate attributeName="r" values="8;9.6;8" dur="3s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="286" cy="126" r="7"><animate attributeName="r" values="7;8.6;7" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="286" cy="186" r="7"><animate attributeName="r" values="7;8.6;7" dur="3s" begin="2.8s" repeatCount="indefinite"/></circle>
+  </g>
+  <circle cx="368" cy="156" r="12" fill="#050816" stroke="#00FFD5" stroke-width="2.4" filter="url(#aGlow)">
+    <animate attributeName="stroke-opacity" values="0.45;1;0.45" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M366 150 l-5 8 h5 l-2 8 8 -10 h-5 z" fill="#00FFD5"/>
+
+  <!-- Layer labels -->
+  <g font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" font-weight="600"
+     letter-spacing="1.2" fill="#00C8FF" opacity="0.6" text-anchor="middle">
+    <text x="120" y="244">INPUT</text>
+    <text x="200" y="244">HIDDEN</text>
+    <text x="286" y="244">DENSE</text>
+    <text x="368" y="244">OUT</text>
+  </g>
+
+  <!-- Confidence meter -->
+  <g transform="translate(24 196)">
+    <text x="0" y="-6" font-family="'Consolas',monospace" font-size="9" fill="#00C8FF" opacity="0.8">confidence</text>
+    <rect x="0" y="0" width="70" height="6" rx="3" fill="#0b1730" stroke="#0066FF" stroke-opacity="0.4"/>
+    <rect x="0" y="0" width="10" height="6" rx="3" fill="url(#aMeter)">
+      <animate attributeName="width" values="10;64;40;68;10" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Inference console -->
+  <g transform="translate(24 82)" font-family="'Consolas',monospace" font-size="9" fill="#00FFD5">
+    <text x="0" y="0" opacity="0.85">&gt; model.predict()
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/></text>
+    <text x="0" y="14" fill="#00C8FF" opacity="0.6">&gt; tokens/s 184</text>
+  </g>
+</svg>

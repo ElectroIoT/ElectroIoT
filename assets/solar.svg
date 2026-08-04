@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ElectroIoT - Solar Energy Illustration
+  Hybrid inverter + PV array + battery bank, with animated energy flow.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="440" height="280"
+     role="img" aria-label="Solar energy automation illustration">
+  <title>Solar Energy &#183; MPPT &#183; Hybrid Inverter &#183; BMS</title>
+
+  <defs>
+    <linearGradient id="sCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="sEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#00FFD5"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="sPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0d3f8a"/>
+      <stop offset="55%"  stop-color="#0a2a5e"/>
+      <stop offset="100%" stop-color="#061a3a"/>
+    </linearGradient>
+    <radialGradient id="sSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00FFD5" stop-opacity="0.85"/>
+      <stop offset="55%"  stop-color="#00C8FF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="sCell" width="13" height="13" patternUnits="userSpaceOnUse">
+      <rect width="13" height="13" fill="none" stroke="#00C8FF" stroke-opacity="0.35" stroke-width="0.7"/>
+    </pattern>
+    <filter id="sGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" width="436" height="276" rx="18" fill="url(#sCard)"
+        stroke="url(#sEdge)" stroke-width="1.6"/>
+  <rect x="2" y="2" width="436" height="276" rx="18" fill="none"
+        stroke="#00FFD5" stroke-opacity="0.18" stroke-width="6" filter="url(#sGlow)"/>
+
+  <!-- Sun -->
+  <circle cx="356" cy="66" r="52" fill="url(#sSun)">
+    <animate attributeName="r" values="48;58;48" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="356" cy="66" r="18" fill="#00FFD5" opacity="0.9" filter="url(#sGlow)"/>
+  <g stroke="#00FFD5" stroke-width="2" stroke-linecap="round" opacity="0.7">
+    <line x1="356" y1="34" x2="356" y2="24"><animate attributeName="y2" values="24;18;24" dur="3s" repeatCount="indefinite"/></line>
+    <line x1="388" y1="66" x2="398" y2="66"><animate attributeName="x2" values="398;404;398" dur="3s" begin="0.4s" repeatCount="indefinite"/></line>
+    <line x1="314" y1="66" x2="304" y2="66"><animate attributeName="x2" values="304;298;304" dur="3s" begin="0.8s" repeatCount="indefinite"/></line>
+    <line x1="379" y1="43" x2="386" y2="36"/>
+    <line x1="333" y1="43" x2="326" y2="36"/>
+    <line x1="379" y1="89" x2="386" y2="96"/>
+    <line x1="333" y1="89" x2="326" y2="96"/>
+  </g>
+
+  <!-- Photons falling onto the array -->
+  <g stroke="#00FFD5" stroke-width="1.6" stroke-linecap="round" opacity="0.8">
+    <line x1="300" y1="100" x2="286" y2="118">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/></line>
+    <line x1="272" y1="96" x2="258" y2="114">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></line>
+    <line x1="244" y1="104" x2="230" y2="122">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" begin="1.2s" repeatCount="indefinite"/></line>
+  </g>
+
+  <!-- PV array -->
+  <g transform="translate(40 128)">
+    <g transform="skewX(-18)">
+      <rect x="0" y="0" width="78" height="52" rx="3" fill="url(#sPanel)" stroke="#00C8FF" stroke-opacity="0.7"/>
+      <rect x="0" y="0" width="78" height="52" rx="3" fill="url(#sCell)"/>
+      <rect x="0" y="0" width="78" height="52" rx="3" fill="#00FFD5" opacity="0">
+        <animate attributeName="opacity" values="0;0.25;0" dur="4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g transform="translate(92 0) skewX(-18)">
+      <rect x="0" y="0" width="78" height="52" rx="3" fill="url(#sPanel)" stroke="#00C8FF" stroke-opacity="0.7"/>
+      <rect x="0" y="0" width="78" height="52" rx="3" fill="url(#sCell)"/>
+      <rect x="0" y="0" width="78" height="52" rx="3" fill="#00FFD5" opacity="0">
+        <animate attributeName="opacity" values="0;0.25;0" dur="4s" begin="1.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g stroke="#0066FF" stroke-width="2.4" stroke-opacity="0.8">
+      <line x1="16" y1="52" x2="20" y2="74"/>
+      <line x1="64" y1="52" x2="68" y2="74"/>
+      <line x1="108" y1="52" x2="112" y2="74"/>
+      <line x1="156" y1="52" x2="160" y2="74"/>
+    </g>
+  </g>
+
+  <!-- DC bus to the inverter -->
+  <path id="sBus" d="M210 178 H262 V132" fill="none" stroke="#00C8FF" stroke-opacity="0.4" stroke-width="2"/>
+  <circle r="3" fill="#00FFD5" filter="url(#sGlow)">
+    <animateMotion path="M210 178 H262 V132" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Hybrid inverter -->
+  <g transform="translate(238 74)">
+    <rect x="0" y="0" width="58" height="58" rx="8" fill="#0b1730" stroke="#00C8FF" stroke-width="1.6"/>
+    <rect x="8" y="9" width="42" height="18" rx="3" fill="#050816" stroke="#00FFD5" stroke-opacity="0.6"/>
+    <text x="29" y="22" text-anchor="middle" font-family="'Consolas',monospace" font-size="10"
+          font-weight="700" fill="#00FFD5">5.2kW
+      <animate attributeName="opacity" values="1;0.45;1" dur="2.2s" repeatCount="indefinite"/>
+    </text>
+    <g fill="#00C8FF" opacity="0.8">
+      <circle cx="14" cy="38" r="3"><animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+      <circle cx="26" cy="38" r="3" opacity="0.5"/>
+      <circle cx="38" cy="38" r="3"><animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/></circle>
+    </g>
+    <rect x="8" y="46" width="42" height="4" rx="2" fill="#0066FF" opacity="0.5"/>
+  </g>
+
+  <!-- Battery bank -->
+  <g transform="translate(320 152)">
+    <rect x="0" y="0" width="84" height="46" rx="7" fill="#0b1730" stroke="#00C8FF" stroke-width="1.5"/>
+    <rect x="84" y="16" width="6" height="14" rx="2" fill="#00C8FF" opacity="0.8"/>
+    <g>
+      <rect x="8"  y="10" width="16" height="26" rx="2" fill="#00FFD5" opacity="0.85"/>
+      <rect x="28" y="10" width="16" height="26" rx="2" fill="#00FFD5" opacity="0.6">
+        <animate attributeName="opacity" values="0.25;0.85;0.25" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="48" y="10" width="16" height="26" rx="2" fill="#00C8FF" opacity="0.3">
+        <animate attributeName="opacity" values="0.1;0.6;0.1" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <text x="42" y="62" text-anchor="middle" font-family="'Segoe UI',system-ui,sans-serif"
+          font-size="9" font-weight="600" letter-spacing="1.6" fill="#00C8FF" opacity="0.8">BMS &#183; LiFePO4</text>
+  </g>
+
+  <!-- AC output arc to the home -->
+  <path d="M296 104 Q334 104 344 140" fill="none" stroke="#00C8FF" stroke-opacity="0.35"
+        stroke-width="2" stroke-dasharray="4 5"/>
+
+  <!-- Caption -->
+  <text x="24" y="42" font-family="'Segoe UI',system-ui,sans-serif" font-size="18"
+        font-weight="800" fill="#EAF6FF">Solar <tspan fill="#00FFD5">Automation</tspan></text>
+  <text x="24" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        font-weight="600" letter-spacing="1.8" fill="#00C8FF" opacity="0.75">
+    MPPT &#183; HYBRID INVERTER &#183; BMS TELEMETRY
+  </text>
+  <text x="24" y="252" font-family="'Consolas',monospace" font-size="10"
+        fill="#00FFD5" opacity="0.7">yield: 28.4 kWh/day &#183; export: 6.1 kWh &#183; soc: 94%</text>
+</svg>

@@ -1,0 +1,80 @@
+# ============================================================================
+#  ElectroIoT — Contribution Snake Animation
+# ----------------------------------------------------------------------------
+#  Renders the contribution graph as a snake that eats every commit square,
+#  then publishes the generated SVG/GIF to the dedicated `output` branch so the
+#  README can hot-link them without polluting `main` history.
+#
+#  Produces:
+#    output/github-snake.svg        light theme
+#    output/github-snake-dark.svg   dark theme (used by the README)
+#    output/github-snake.gif        neon-blue animated GIF fallback
+#
+#  Requirements: Actions enabled + workflow write permission (see setup-guide.md)
+# ============================================================================
+
+name: Snake Animation
+
+on:
+  # Refresh once a day at 00:15 UTC so the graph always looks current.
+  schedule:
+    - cron: "15 0 * * *"
+  # Allow a manual run from the Actions tab.
+  workflow_dispatch:
+  # Regenerate whenever the profile itself changes.
+  push:
+    branches:
+      - main
+
+# Least-privilege: only the contents scope is needed to push the output branch.
+permissions:
+  contents: write
+
+# A newer run always supersedes an in-flight one.
+concurrency:
+  group: snake-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: Generate and publish snake
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # ----------------------------------------------------------------------
+      # 1. Build the snake artefacts from the public contribution calendar.
+      # ----------------------------------------------------------------------
+      - name: Generate snake artefacts
+        uses: Platane/snk@v3
+        id: snake
+        with:
+          # Uses the repository owner so the workflow keeps working after a fork.
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=%2300C8FF&color_dots=%23111827,%230066FF,%2300C8FF,%2300FFD5,%23EAF6FF
+            dist/github-snake.gif?color_snake=%2300C8FF&color_dots=%23111827,%230066FF,%2300C8FF,%2300FFD5,%23EAF6FF
+
+      # ----------------------------------------------------------------------
+      # 2. Publish to the `output` branch (created automatically on first run).
+      # ----------------------------------------------------------------------
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore(snake): refresh contribution animation"
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ----------------------------------------------------------------------
+      # 3. Keep the artefacts downloadable for 7 days for debugging.
+      # ----------------------------------------------------------------------
+      - name: Upload artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake-animation
+          path: dist
+          retention-days: 7

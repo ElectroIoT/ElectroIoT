@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ElectroIoT - Premium Brand Logo
+  A hexagonal circuit shield enclosing an energy bolt, orbited by IoT node satellites.
+  Square 512x512 canvas so it also works as an avatar / favicon source.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"
+     role="img" aria-label="ElectroIoT logo">
+  <title>ElectroIoT</title>
+
+  <defs>
+    <linearGradient id="lBolt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#00FFD5"/>
+      <stop offset="50%"  stop-color="#00C8FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+
+    <linearGradient id="lHex" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#00C8FF"/>
+      <stop offset="55%"  stop-color="#0066FF"/>
+      <stop offset="100%" stop-color="#00FFD5"/>
+    </linearGradient>
+
+    <radialGradient id="lCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#0b1730"/>
+      <stop offset="70%"  stop-color="#070f22"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </radialGradient>
+
+    <radialGradient id="lHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00C8FF" stop-opacity="0.42"/>
+      <stop offset="70%"  stop-color="#0066FF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="lGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="lGlowSm" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Halo -->
+  <circle cx="256" cy="256" r="240" fill="url(#lHalo)">
+    <animate attributeName="r" values="230;248;230" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Orbit ring with node satellites -->
+  <g>
+    <circle cx="256" cy="256" r="212" fill="none" stroke="#00C8FF"
+            stroke-opacity="0.22" stroke-width="2" stroke-dasharray="10 14"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 256 256"
+                        to="360 256 256" dur="24s" repeatCount="indefinite"/>
+      <circle cx="256" cy="44"  r="8" fill="#00FFD5" filter="url(#lGlowSm)"/>
+      <circle cx="440" cy="362" r="6" fill="#00C8FF" filter="url(#lGlowSm)"/>
+      <circle cx="72"  cy="362" r="6" fill="#0066FF" filter="url(#lGlowSm)"/>
+    </g>
+  </g>
+
+  <!-- Hexagonal shield -->
+  <g filter="url(#lGlow)">
+    <path d="M256 56 L420 150 V350 L256 456 L92 350 V150 Z"
+          fill="url(#lCore)" stroke="url(#lHex)" stroke-width="9" stroke-linejoin="round"/>
+  </g>
+  <path d="M256 88 L392 166 V336 L256 424 L120 336 V166 Z"
+        fill="none" stroke="#00C8FF" stroke-opacity="0.30" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Internal circuit traces -->
+  <g fill="none" stroke="#00C8FF" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round">
+    <path d="M120 224 H166 L188 202"/>
+    <path d="M392 224 H346 L324 202"/>
+    <path d="M120 300 H160 L182 322"/>
+    <path d="M392 300 H352 L330 322"/>
+  </g>
+  <g fill="#050816" stroke="#00FFD5" stroke-width="3.5">
+    <circle cx="188" cy="202" r="7"/>
+    <circle cx="324" cy="202" r="7"/>
+    <circle cx="182" cy="322" r="7"/>
+    <circle cx="330" cy="322" r="7"/>
+  </g>
+
+  <!-- Energy bolt -->
+  <g filter="url(#lGlow)">
+    <path d="M286 128 L188 274 H246 L226 388 L330 236 H268 Z"
+          fill="url(#lBolt)" stroke="#EAF6FF" stroke-opacity="0.25" stroke-width="3"
+          stroke-linejoin="round">
+      <animate attributeName="opacity" values="0.88;1;0.88" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Signal arcs -->
+  <g fill="none" stroke="#00FFD5" stroke-width="5" stroke-linecap="round" opacity="0.85">
+    <path d="M356 216 a 52 52 0 0 1 0 80" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M156 216 a 52 52 0 0 0 0 80" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="2.8s" begin="0.7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ElectroIoT card - Deye Hybrid Inverter -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150"
+     role="img" aria-label="Deye Hybrid Inverter card">
+  <title>Deye Hybrid Inverter - register mapping and control</title>
+  <defs>
+    <linearGradient id="dy-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="dy-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0066FF"/><stop offset="100%" stop-color="#00FFD5"/>
+    </linearGradient>
+    <linearGradient id="dy-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00C8FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00C8FF" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dy-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dy-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="dy-clip"><rect x="2" y="2" width="376" height="146" rx="16"/></clipPath>
+  </defs>
+
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="url(#dy-bg)" stroke="url(#dy-edge)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="none" stroke="#0066FF"
+        stroke-opacity="0.18" stroke-width="6" filter="url(#dy-glow)"/>
+
+  <g clip-path="url(#dy-clip)">
+    <rect x="-140" y="0" width="120" height="150" fill="url(#dy-sheen)">
+      <animate attributeName="x" values="-140;400" dur="6s" begin="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="52" cy="56" r="46" fill="url(#dy-halo)"/>
+  </g>
+
+  <g transform="translate(26 30)">
+    <rect x="0" y="0" width="52" height="52" rx="14" fill="#0b1730" stroke="#0066FF" stroke-opacity="0.65"/>
+    <rect x="11" y="12" width="30" height="20" rx="3" fill="#050816" stroke="#00C8FF" stroke-opacity="0.6"/>
+    <path d="M14 22 q4 -8 8 0 t8 0 t8 0" fill="none" stroke="#00FFD5" stroke-width="1.6"
+          stroke-linecap="round" stroke-dasharray="40" stroke-dashoffset="40">
+      <animate attributeName="stroke-dashoffset" values="40;0;0;40" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <g fill="#00C8FF">
+      <circle cx="16" cy="39" r="2.4"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+      <circle cx="26" cy="39" r="2.4" opacity="0.5"/>
+      <circle cx="36" cy="39" r="2.4"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <text x="96" y="46" font-family="'Segoe UI',system-ui,sans-serif" font-size="17"
+        font-weight="800" fill="#EAF6FF">Deye Hybrid Inverter</text>
+  <text x="96" y="68" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">Documented register maps, work-mode control and</text>
+  <text x="96" y="83" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">grid/battery scheduling from a single API.</text>
+
+  <g font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" font-weight="700" letter-spacing="1">
+    <rect x="96"  y="98" width="60" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="126" y="110" text-anchor="middle" fill="#00C8FF">RS485</text>
+    <rect x="162" y="98" width="66" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="195" y="110" text-anchor="middle" fill="#00C8FF">SOLARMAN</text>
+    <rect x="234" y="98" width="54" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="261" y="110" text-anchor="middle" fill="#00C8FF">HA</text>
+  </g>
+
+  <rect x="26" y="128" width="0" height="2.5" rx="1.25" fill="url(#dy-edge)" filter="url(#dy-glow)">
+    <animate attributeName="width" values="0;326;326;0" keyTimes="0;0.4;0.8;1" dur="5s" begin="2.8s" repeatCount="indefinite"/>
+  </rect>
+</svg>

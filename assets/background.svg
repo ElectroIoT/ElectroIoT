@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ElectroIoT - Animated Background Texture
+  Seamless-feeling cyber grid with a moving horizon, hex mesh, drifting particles
+  and a slow diagonal light sweep. Suitable as a section backdrop or social banner.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600"
+     role="img" aria-label="Animated cyberpunk background">
+  <title>ElectroIoT - animated background</title>
+
+  <defs>
+    <linearGradient id="bgBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#050816"/>
+      <stop offset="48%"  stop-color="#081432"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+
+    <linearGradient id="bgSweep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#00C8FF" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#00C8FF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="bgSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00FFD5" stop-opacity="0.30"/>
+      <stop offset="45%"  stop-color="#0066FF" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bgVig" cx="50%" cy="50%" r="70%">
+      <stop offset="50%"  stop-color="#050816" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.9"/>
+    </radialGradient>
+
+    <pattern id="bgGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0 H0 V48" fill="none" stroke="#00C8FF" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+
+    <pattern id="bgHex" width="56" height="97" patternUnits="userSpaceOnUse"
+             patternTransform="scale(0.9)">
+      <path d="M28 0 L56 16 V48 L28 64 L0 48 V16 Z" fill="none"
+            stroke="#0066FF" stroke-opacity="0.16" stroke-width="1"/>
+      <path d="M28 48.5 L56 64.5 V96.5 L28 112.5 L0 96.5 V64.5 Z" fill="none"
+            stroke="#0066FF" stroke-opacity="0.16" stroke-width="1"/>
+    </pattern>
+
+    <filter id="bgGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bgBase)"/>
+  <rect width="1200" height="600" fill="url(#bgHex)"/>
+  <rect width="1200" height="600" fill="url(#bgGrid)"/>
+
+  <!-- Horizon sun -->
+  <ellipse cx="600" cy="330" rx="380" ry="180" fill="url(#bgSun)">
+    <animate attributeName="rx" values="360;410;360" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Horizon line -->
+  <rect x="0" y="330" width="1200" height="1.5" fill="#00C8FF" opacity="0.55" filter="url(#bgGlow)"/>
+
+  <!-- Perspective floor: vanishing-point rays -->
+  <g stroke="#00C8FF" stroke-opacity="0.14" stroke-width="1">
+    <line x1="600" y1="330" x2="-320" y2="600"/>
+    <line x1="600" y1="330" x2="-60"  y2="600"/>
+    <line x1="600" y1="330" x2="180"  y2="600"/>
+    <line x1="600" y1="330" x2="390"  y2="600"/>
+    <line x1="600" y1="330" x2="600"  y2="600"/>
+    <line x1="600" y1="330" x2="810"  y2="600"/>
+    <line x1="600" y1="330" x2="1020" y2="600"/>
+    <line x1="600" y1="330" x2="1260" y2="600"/>
+    <line x1="600" y1="330" x2="1520" y2="600"/>
+  </g>
+
+  <!-- Floor scan lines racing toward the viewer -->
+  <g stroke="#00FFD5" stroke-width="1.4" filter="url(#bgGlow)">
+    <line x1="0" y1="340" x2="1200" y2="340" stroke-opacity="0">
+      <animate attributeName="y1" values="336;600" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="336;600" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0;0.45;0" dur="5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="340" x2="1200" y2="340" stroke-opacity="0">
+      <animate attributeName="y1" values="336;600" dur="5s" begin="1.66s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="336;600" dur="5s" begin="1.66s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0;0.45;0" dur="5s" begin="1.66s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="340" x2="1200" y2="340" stroke-opacity="0">
+      <animate attributeName="y1" values="336;600" dur="5s" begin="3.33s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="336;600" dur="5s" begin="3.33s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0;0.45;0" dur="5s" begin="3.33s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Constellation of IoT nodes -->
+  <g>
+    <g stroke="#0066FF" stroke-opacity="0.35" stroke-width="1">
+      <line x1="150" y1="120" x2="300" y2="80"/>
+      <line x1="300" y1="80"  x2="430" y2="170"/>
+      <line x1="430" y1="170" x2="600" y2="120"/>
+      <line x1="600" y1="120" x2="760" y2="200"/>
+      <line x1="760" y1="200" x2="920" y2="110"/>
+      <line x1="920" y1="110" x2="1060" y2="180"/>
+      <line x1="150" y1="120" x2="240" y2="230"/>
+      <line x1="240" y1="230" x2="430" y2="170"/>
+      <line x1="760" y1="200" x2="880" y2="270"/>
+    </g>
+    <g fill="#00C8FF" filter="url(#bgGlow)">
+      <circle cx="150"  cy="120" r="3"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle cx="300"  cy="80"  r="2.4"><animate attributeName="opacity" values="1;0.35;1" dur="4.1s" repeatCount="indefinite"/></circle>
+      <circle cx="430"  cy="170" r="3.4"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.7s" repeatCount="indefinite"/></circle>
+      <circle cx="600"  cy="120" r="2.6"><animate attributeName="opacity" values="1;0.4;1" dur="3.8s" repeatCount="indefinite"/></circle>
+      <circle cx="760"  cy="200" r="3.2"><animate attributeName="opacity" values="0.45;1;0.45" dur="3.4s" repeatCount="indefinite"/></circle>
+      <circle cx="920"  cy="110" r="2.4"><animate attributeName="opacity" values="1;0.3;1" dur="4.6s" repeatCount="indefinite"/></circle>
+      <circle cx="1060" cy="180" r="3"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="240"  cy="230" r="2.2"><animate attributeName="opacity" values="0.8;0.25;0.8" dur="5.2s" repeatCount="indefinite"/></circle>
+      <circle cx="880"  cy="270" r="2.2"><animate attributeName="opacity" values="0.3;0.95;0.3" dur="4.4s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <!-- Drifting particles -->
+  <g fill="#00FFD5">
+    <circle cx="90"   cy="560" r="1.6"><animate attributeName="cy" values="560;40"  dur="20s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="20s" repeatCount="indefinite"/></circle>
+    <circle cx="330"  cy="580" r="1.2"><animate attributeName="cy" values="580;60"  dur="24s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="24s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cx="640"  cy="590" r="1.8"><animate attributeName="cy" values="590;30"  dur="18s" begin="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.85;0" dur="18s" begin="6s" repeatCount="indefinite"/></circle>
+    <circle cx="880"  cy="570" r="1.4"><animate attributeName="cy" values="570;70"  dur="22s" begin="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.75;0" dur="22s" begin="9s" repeatCount="indefinite"/></circle>
+    <circle cx="1120" cy="585" r="1.5"><animate attributeName="cy" values="585;50"  dur="26s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="26s" begin="2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Diagonal light sweep -->
+  <rect x="-500" y="-100" width="360" height="800" fill="url(#bgSweep)" transform="rotate(12 600 300)">
+    <animate attributeName="x" values="-500;1400" dur="14s" repeatCount="indefinite"/>
+  </rect>
+
+  <rect width="1200" height="600" fill="url(#bgVig)"/>
+</svg>

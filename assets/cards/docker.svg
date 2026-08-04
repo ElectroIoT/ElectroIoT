@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ElectroIoT card - Docker -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150"
+     role="img" aria-label="Docker card">
+  <title>Docker - containerised delivery</title>
+  <defs>
+    <linearGradient id="dk-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="dk-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0066FF"/><stop offset="100%" stop-color="#00C8FF"/>
+    </linearGradient>
+    <linearGradient id="dk-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00C8FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00C8FF" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dk-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dk-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="dk-clip"><rect x="2" y="2" width="376" height="146" rx="16"/></clipPath>
+  </defs>
+
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="url(#dk-bg)" stroke="url(#dk-edge)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="none" stroke="#0066FF"
+        stroke-opacity="0.18" stroke-width="6" filter="url(#dk-glow)"/>
+
+  <g clip-path="url(#dk-clip)">
+    <rect x="-140" y="0" width="120" height="150" fill="url(#dk-sheen)">
+      <animate attributeName="x" values="-140;400" dur="6s" begin="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="52" cy="56" r="46" fill="url(#dk-halo)"/>
+  </g>
+
+  <g transform="translate(26 30)">
+    <rect x="0" y="0" width="52" height="52" rx="14" fill="#0b1730" stroke="#0066FF" stroke-opacity="0.65"/>
+    <g fill="#00C8FF" opacity="0.9">
+      <rect x="11" y="28" width="8" height="8" rx="1.5"/>
+      <rect x="21" y="28" width="8" height="8" rx="1.5"/>
+      <rect x="31" y="28" width="8" height="8" rx="1.5"/>
+      <rect x="21" y="18" width="8" height="8" rx="1.5"/>
+      <rect x="31" y="18" width="8" height="8" rx="1.5">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="31" y="8" width="8" height="8" rx="1.5" opacity="0.6"/>
+    </g>
+    <path d="M9 40 q 10 6 20 0 t 14 0" fill="none" stroke="#00FFD5" stroke-width="1.6" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <text x="96" y="46" font-family="'Segoe UI',system-ui,sans-serif" font-size="17"
+        font-weight="800" fill="#EAF6FF">Docker</text>
+  <text x="96" y="68" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">Multi-stage builds, compose stacks and slim images</text>
+  <text x="96" y="83" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">shipped through CI to edge hosts.</text>
+
+  <g font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" font-weight="700" letter-spacing="1">
+    <rect x="96"  y="98" width="64" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="128" y="110" text-anchor="middle" fill="#00C8FF">COMPOSE</text>
+    <rect x="166" y="98" width="52" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="192" y="110" text-anchor="middle" fill="#00C8FF">CI/CD</text>
+    <rect x="224" y="98" width="62" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="255" y="110" text-anchor="middle" fill="#00C8FF">REGISTRY</text>
+  </g>
+
+  <rect x="26" y="128" width="0" height="2.5" rx="1.25" fill="url(#dk-edge)" filter="url(#dk-glow)">
+    <animate attributeName="width" values="0;326;326;0" keyTimes="0;0.4;0.8;1" dur="5s" begin="3.6s" repeatCount="indefinite"/>
+  </rect>
+</svg>

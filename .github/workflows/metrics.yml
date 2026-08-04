@@ -1,0 +1,186 @@
+# ============================================================================
+#  ElectroIoT — GitHub Metrics
+# ----------------------------------------------------------------------------
+#  Renders a set of themed metrics panels with lowlighter/metrics and commits
+#  them straight back to `main` under /metrics so the README can embed them.
+#
+#  Produces:
+#    metrics/metrics.svg                  overview + languages + activity
+#    metrics/metrics.achievements.svg     unlocked achievements
+#    metrics/metrics.languages.svg        detailed language breakdown
+#    metrics/metrics.isocalendar.svg      isometric contribution calendar
+#    metrics/metrics.calendar.svg         full-year calendar
+#    metrics/metrics.lines.svg            lines of code changed
+#    metrics/metrics.habits.svg           coding habits and time-of-day charts
+#    metrics/metrics.stars.svg            most starred repositories
+#
+#  REQUIRED SECRET: METRICS_TOKEN
+#    A classic Personal Access Token with the `public_repo` scope (add `repo`
+#    and `read:org` if you also want private/organisation data).
+#    Repository → Settings → Secrets and variables → Actions → New secret.
+#    Full walkthrough in setup-guide.md.
+# ============================================================================
+
+name: GitHub Metrics
+
+on:
+  # Refresh every 6 hours so activity panels stay fresh.
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metrics-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  metrics:
+    name: Render metrics panels
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    # Shared configuration for every panel below.
+    env:
+      METRICS_USER: ${{ github.repository_owner }}
+      METRICS_TIMEZONE: Asia/Kolkata
+
+    steps:
+      # ----------------------------------------------------------------------
+      # Panel 1 — Overview: profile, most-used languages, activity, habits.
+      # ----------------------------------------------------------------------
+      - name: Overview
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.svg
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          config_display: large
+          config_animations: yes
+          plugin_lines: yes
+          plugin_languages: yes
+          plugin_languages_ignored: html, css, scss, dockerfile, makefile, blade, hcl
+          plugin_languages_limit: 8
+          plugin_languages_colors: 00C8FF, 0066FF, 00FFD5, 3B82F6, 22D3EE, 6366F1, 0EA5E9, 14B8A6
+
+      # ----------------------------------------------------------------------
+      # Panel 2 — Achievements.
+      # ----------------------------------------------------------------------
+      - name: Achievements
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.achievements.svg
+          base: ""
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          config_display: columns
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_limit: 0
+
+      # ----------------------------------------------------------------------
+      # Panel 3 — Detailed language breakdown (bytes + recent commits).
+      # ----------------------------------------------------------------------
+      - name: Languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.languages.svg
+          base: ""
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage, lines
+          plugin_languages_indepth: yes
+          plugin_languages_limit: 10
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_ignored: html, css, scss, dockerfile, makefile, blade, hcl
+          plugin_languages_colors: 00C8FF, 0066FF, 00FFD5, 3B82F6, 22D3EE, 6366F1, 0EA5E9, 14B8A6
+
+      # ----------------------------------------------------------------------
+      # Panel 4 — Isometric contribution calendar.
+      # ----------------------------------------------------------------------
+      - name: Isometric calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.isocalendar.svg
+          base: ""
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      # ----------------------------------------------------------------------
+      # Panel 5 — Classic full-year contribution calendar.
+      # ----------------------------------------------------------------------
+      - name: Calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.calendar.svg
+          base: ""
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          plugin_calendar: yes
+          plugin_calendar_limit: 0
+
+      # ----------------------------------------------------------------------
+      # Panel 6 — Lines of code added / removed.
+      # ----------------------------------------------------------------------
+      - name: Lines of code
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.lines.svg
+          base: ""
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          plugin_lines: yes
+          plugin_lines_sections: base, repositories
+          plugin_lines_repositories_limit: 6
+
+      # ----------------------------------------------------------------------
+      # Panel 7 — Coding habits (facts, charts, indepth analysis).
+      # ----------------------------------------------------------------------
+      - name: Habits
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.habits.svg
+          base: ""
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_trim: yes
+
+      # ----------------------------------------------------------------------
+      # Panel 8 — Most starred repositories.
+      # ----------------------------------------------------------------------
+      - name: Featured repositories
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
+          filename: metrics/metrics.stars.svg
+          base: ""
+          config_timezone: ${{ env.METRICS_TIMEZONE }}
+          plugin_stars: yes
+          plugin_stars_limit: 4
+          plugin_stargazers: yes
+          plugin_stargazers_charts: yes

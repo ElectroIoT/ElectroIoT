@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ElectroIoT card - Solar Bridge -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150"
+     role="img" aria-label="Solar Bridge card">
+  <title>Solar Bridge - inverter telemetry bridge</title>
+  <defs>
+    <linearGradient id="sb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="sb-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00FFD5"/><stop offset="55%" stop-color="#00C8FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="sb-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00C8FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00C8FF" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="sb-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FFD5" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sb-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="sb-clip"><rect x="2" y="2" width="376" height="146" rx="16"/></clipPath>
+  </defs>
+
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="url(#sb-bg)" stroke="url(#sb-edge)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="none" stroke="#00FFD5"
+        stroke-opacity="0.16" stroke-width="6" filter="url(#sb-glow)"/>
+
+  <g clip-path="url(#sb-clip)">
+    <rect x="-140" y="0" width="120" height="150" fill="url(#sb-sheen)">
+      <animate attributeName="x" values="-140;400" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="52" cy="56" r="46" fill="url(#sb-halo)"/>
+  </g>
+
+  <!-- Icon: PV panel bridging to a cloud endpoint -->
+  <g transform="translate(26 30)">
+    <rect x="0" y="0" width="52" height="52" rx="14" fill="#0b1730" stroke="#00FFD5" stroke-opacity="0.55"/>
+    <g transform="translate(10 12)" stroke="#00FFD5" stroke-width="1.6" fill="none">
+      <path d="M2 16 L8 2 h16 l6 14 Z"/>
+      <path d="M5 9 h22 M16 2 v14"/>
+      <path d="M16 20 v6"/>
+    </g>
+    <circle cx="26" cy="41" r="3" fill="#00FFD5" filter="url(#sb-glow)">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="96" y="46" font-family="'Segoe UI',system-ui,sans-serif" font-size="17"
+        font-weight="800" fill="#EAF6FF">Solar Bridge</text>
+  <text x="96" y="68" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">Modbus / RS485 to MQTT telemetry bridge for</text>
+  <text x="96" y="83" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">hybrid inverters, with auto-discovery.</text>
+
+  <g font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" font-weight="700" letter-spacing="1">
+    <rect x="96"  y="98" width="58" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="125" y="110" text-anchor="middle" fill="#00C8FF">MODBUS</text>
+    <rect x="160" y="98" width="46" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="183" y="110" text-anchor="middle" fill="#00C8FF">MQTT</text>
+    <rect x="212" y="98" width="58" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="241" y="110" text-anchor="middle" fill="#00C8FF">PYTHON</text>
+  </g>
+
+  <rect x="26" y="128" width="0" height="2.5" rx="1.25" fill="url(#sb-edge)" filter="url(#sb-glow)">
+    <animate attributeName="width" values="0;326;326;0" keyTimes="0;0.4;0.8;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>

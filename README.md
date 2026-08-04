@@ -1,7 +1,7 @@
 <!--
 ================================================================================
   ElectroIoT — GitHub Profile README
---------------------------------------------------------------------------------
+================================================================================
   Repository : github.com/electroiot/electroiot   (special profile repository)
   Website    : https://electroiot.in
   Theme      : Cyberpunk · Glassmorphism · Neon Blue · AI · Solar · Dark Mode
@@ -226,7 +226,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- ---------------------------------------------------------- Languages -->
+<!-- ========================================================== Languages -->
 <h3>Languages</h3>
 
 <a href="https://skillicons.dev">
@@ -235,7 +235,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- --------------------------------------------------------- Frameworks -->
+<!-- ========================================================= Frameworks -->
 <h3>Frameworks</h3>
 
 <a href="https://skillicons.dev">
@@ -244,7 +244,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- ------------------------------------------------------------ Backend -->
+<!-- ============================================================ Backend -->
 <h3>Backend</h3>
 
 <a href="https://skillicons.dev">
@@ -253,7 +253,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- ----------------------------------------------------------- Frontend -->
+<!-- =========================================================== Frontend -->
 <h3>Frontend</h3>
 
 <a href="https://skillicons.dev">
@@ -262,7 +262,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- -------------------------------------------------------------- Cloud -->
+<!-- ============================================================== Cloud -->
 <h3>Cloud &amp; Hosting</h3>
 
 <a href="https://skillicons.dev">
@@ -271,7 +271,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- ----------------------------------------------------------- Database -->
+<!-- =========================================================== Database -->
 <h3>Databases</h3>
 
 <a href="https://skillicons.dev">
@@ -280,7 +280,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- ----------------------------------------------------------- Embedded -->
+<!-- =========================================================== Embedded -->
 <h3>Embedded &amp; Hardware</h3>
 
 <a href="https://skillicons.dev">
@@ -298,7 +298,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br />
 
-<!-- --------------------------------------------------------- Automation -->
+<!-- ========================================================= Automation -->
 <h3>Automation &amp; IoT</h3>
 
 <a href="https://skillicons.dev">
@@ -314,7 +314,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br />
 
-<!-- ------------------------------------------------------------- DevOps -->
+<!-- ============================================================= DevOps -->
 <h3>DevOps</h3>
 
 <a href="https://skillicons.dev">
@@ -323,7 +323,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 <br /><br />
 
-<!-- -------------------------------------------------------------- Tools -->
+<!-- ============================================================== Tools -->
 <h3>Tools</h3>
 
 <a href="https://skillicons.dev">
@@ -550,7 +550,7 @@ unforgiving, and that discipline has made my web code considerably better.
 
 ## <img src="assets/logo.svg" width="26" align="top" alt="" />&nbsp; Featured Projects
 
-<!-- ----------------------------------------------------- Project 01 -->
+<!-- ===================================================== Project 01 -->
 
 <table>
   <tr>
@@ -594,7 +594,7 @@ everything to MQTT with Home Assistant auto-discovery.
   </tr>
 </table>
 
-<!-- ----------------------------------------------------- Project 02 -->
+<!-- ===================================================== Project 02 -->
 
 <table>
   <tr>
@@ -638,7 +638,7 @@ around the cheapest and greenest hours.
   </tr>
 </table>
 
-<!-- ----------------------------------------------------- Project 03 -->
+<!-- ===================================================== Project 03 -->
 
 <table>
   <tr>
@@ -680,7 +680,7 @@ and no YAML archaeology required.
   </tr>
 </table>
 
-<!-- ----------------------------------------------------- Project 04 -->
+<!-- ===================================================== Project 04 -->
 
 <table>
   <tr>
@@ -722,7 +722,7 @@ can veto an order before it ever reaches the exchange.
   </tr>
 </table>
 
-<!-- ----------------------------------------------------- Project 05 -->
+<!-- ===================================================== Project 05 -->
 
 <table>
   <tr>
@@ -765,7 +765,7 @@ monitoring — all in the same place the technician already works.
   </tr>
 </table>
 
-<!-- ----------------------------------------------------- Project 06 -->
+<!-- ===================================================== Project 06 -->
 
 <table>
   <tr>

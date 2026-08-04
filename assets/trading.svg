@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ElectroIoT - Trading Dashboard Illustration
+  Candlestick chart, animated equity curve, order book depth and live ticker.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" width="440" height="280"
+     role="img" aria-label="Trading dashboard and crypto automation illustration">
+  <title>Trading Dashboard &#183; Crypto Automation &#183; Realtime Analytics</title>
+
+  <defs>
+    <linearGradient id="tCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050816" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="tEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#00FFD5"/>
+      <stop offset="100%" stop-color="#00C8FF"/>
+    </linearGradient>
+    <linearGradient id="tArea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#00C8FF" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tDepthBid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00FFD5" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="tGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" width="436" height="276" rx="18" fill="url(#tCard)"
+        stroke="url(#tEdge)" stroke-width="1.6"/>
+  <rect x="2" y="2" width="436" height="276" rx="18" fill="none"
+        stroke="#00FFD5" stroke-opacity="0.16" stroke-width="6" filter="url(#tGlow)"/>
+
+  <text x="24" y="40" font-family="'Segoe UI',system-ui,sans-serif" font-size="18"
+        font-weight="800" fill="#EAF6FF">Trading <tspan fill="#00FFD5">Desk</tspan></text>
+  <text x="24" y="58" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        font-weight="600" letter-spacing="1.8" fill="#00C8FF" opacity="0.75">
+    REALTIME &#183; WEBSOCKET &#183; RISK ENGINE
+  </text>
+
+  <!-- Live ticker pill -->
+  <g transform="translate(324 26)">
+    <rect x="0" y="0" width="92" height="24" rx="12" fill="#00FFD5" fill-opacity="0.10"
+          stroke="#00FFD5" stroke-opacity="0.5"/>
+    <circle cx="13" cy="12" r="3.4" fill="#00FFD5" filter="url(#tGlow)">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="24" y="16" font-family="'Consolas',monospace" font-size="9.5" font-weight="700"
+          fill="#00FFD5">LIVE FEED</text>
+  </g>
+
+  <!-- Chart frame -->
+  <g transform="translate(24 78)">
+    <rect x="0" y="0" width="278" height="140" rx="10" fill="#050816" fill-opacity="0.7"
+          stroke="#00C8FF" stroke-opacity="0.22"/>
+    <!-- gridlines -->
+    <g stroke="#00C8FF" stroke-opacity="0.10">
+      <line x1="0" y1="28"  x2="278" y2="28"/>
+      <line x1="0" y1="56"  x2="278" y2="56"/>
+      <line x1="0" y1="84"  x2="278" y2="84"/>
+      <line x1="0" y1="112" x2="278" y2="112"/>
+    </g>
+
+    <!-- Equity area + curve -->
+    <path d="M8 112 L40 96 L72 104 L104 74 L136 84 L168 52 L200 64 L232 34 L264 44 L264 132 L8 132 Z"
+          fill="url(#tArea)"/>
+    <path d="M8 112 L40 96 L72 104 L104 74 L136 84 L168 52 L200 64 L232 34 L264 44"
+          fill="none" stroke="#00C8FF" stroke-width="2.2" stroke-linejoin="round"
+          filter="url(#tGlow)" stroke-dasharray="600" stroke-dashoffset="600">
+      <animate attributeName="stroke-dashoffset" values="600;0;0;600" keyTimes="0;0.45;0.88;1"
+               dur="8s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Candlesticks -->
+    <g stroke-width="6" stroke-linecap="butt">
+      <line x1="24"  y1="98"  x2="24"  y2="120" stroke="#0066FF" stroke-opacity="0.75"/>
+      <line x1="56"  y1="88"  x2="56"  y2="110" stroke="#00FFD5" stroke-opacity="0.7"/>
+      <line x1="88"  y1="94"  x2="88"  y2="116" stroke="#0066FF" stroke-opacity="0.75"/>
+      <line x1="120" y1="66"  x2="120" y2="92"  stroke="#00FFD5" stroke-opacity="0.7"/>
+      <line x1="152" y1="74"  x2="152" y2="98"  stroke="#0066FF" stroke-opacity="0.75"/>
+      <line x1="184" y1="44"  x2="184" y2="72"  stroke="#00FFD5" stroke-opacity="0.7"/>
+      <line x1="216" y1="52"  x2="216" y2="76"  stroke="#0066FF" stroke-opacity="0.75"/>
+      <line x1="248" y1="28"  x2="248" y2="56"  stroke="#00FFD5" stroke-opacity="0.7"/>
+    </g>
+    <g stroke="#00C8FF" stroke-opacity="0.4" stroke-width="1">
+      <line x1="24"  y1="92"  x2="24"  y2="126"/><line x1="56"  y1="80"  x2="56"  y2="118"/>
+      <line x1="88"  y1="86"  x2="88"  y2="122"/><line x1="120" y1="58"  x2="120" y2="100"/>
+      <line x1="152" y1="66"  x2="152" y2="106"/><line x1="184" y1="36"  x2="184" y2="80"/>
+      <line x1="216" y1="44"  x2="216" y2="84"/> <line x1="248" y1="20"  x2="248" y2="64"/>
+    </g>
+
+    <!-- Price crosshair sweeping the chart -->
+    <g stroke="#00FFD5" stroke-opacity="0.5" stroke-dasharray="3 4">
+      <line y1="6" y2="132" x1="8" x2="8">
+        <animate attributeName="x1" values="8;264;8" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="8;264;8" dur="10s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <circle cx="264" cy="44" r="4" fill="#00FFD5" filter="url(#tGlow)">
+      <animate attributeName="r" values="3.4;5.6;3.4" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Order book depth -->
+  <g transform="translate(318 82)">
+    <text x="0" y="-4" font-family="'Consolas',monospace" font-size="8.5" fill="#00C8FF" opacity="0.7">ORDER BOOK</text>
+    <g>
+      <rect x="0" y="4"  width="60" height="7" rx="3" fill="url(#tDepthBid)">
+        <animate attributeName="width" values="60;38;72;60" dur="4s" repeatCount="indefinite"/></rect>
+      <rect x="0" y="16" width="44" height="7" rx="3" fill="url(#tDepthBid)">
+        <animate attributeName="width" values="44;70;30;44" dur="5s" repeatCount="indefinite"/></rect>
+      <rect x="0" y="28" width="72" height="7" rx="3" fill="url(#tDepthBid)">
+        <animate attributeName="width" values="72;46;58;72" dur="3.4s" repeatCount="indefinite"/></rect>
+      <rect x="0" y="40" width="34" height="7" rx="3" fill="url(#tDepthBid)">
+        <animate attributeName="width" values="34;64;42;34" dur="4.6s" repeatCount="indefinite"/></rect>
+      <rect x="0" y="52" width="56" height="7" rx="3" fill="url(#tDepthBid)">
+        <animate attributeName="width" values="56;28;66;56" dur="5.4s" repeatCount="indefinite"/></rect>
+      <rect x="0" y="64" width="48" height="7" rx="3" fill="url(#tDepthBid)">
+        <animate attributeName="width" values="48;74;36;48" dur="4.2s" repeatCount="indefinite"/></rect>
+    </g>
+  </g>
+
+  <!-- KPI strip -->
+  <g transform="translate(24 232)" font-family="'Consolas',monospace">
+    <g>
+      <rect x="0" y="0" width="88" height="30" rx="8" fill="#0b1730" stroke="#00C8FF" stroke-opacity="0.3"/>
+      <text x="8" y="12" font-size="7.5" fill="#00C8FF" opacity="0.7">EQUITY</text>
+      <text x="8" y="24" font-size="11" font-weight="700" fill="#EAF6FF">$128.4k</text>
+    </g>
+    <g transform="translate(98 0)">
+      <rect x="0" y="0" width="88" height="30" rx="8" fill="#0b1730" stroke="#00C8FF" stroke-opacity="0.3"/>
+      <text x="8" y="12" font-size="7.5" fill="#00C8FF" opacity="0.7">WIN RATE</text>
+      <text x="8" y="24" font-size="11" font-weight="700" fill="#00FFD5">68.2%</text>
+    </g>
+    <g transform="translate(196 0)">
+      <rect x="0" y="0" width="88" height="30" rx="8" fill="#0b1730" stroke="#00C8FF" stroke-opacity="0.3"/>
+      <text x="8" y="12" font-size="7.5" fill="#00C8FF" opacity="0.7">LATENCY</text>
+      <text x="8" y="24" font-size="11" font-weight="700" fill="#EAF6FF">42ms</text>
+    </g>
+    <g transform="translate(294 0)">
+      <rect x="0" y="0" width="88" height="30" rx="8" fill="#0b1730" stroke="#00FFD5" stroke-opacity="0.45"/>
+      <text x="8" y="12" font-size="7.5" fill="#00C8FF" opacity="0.7">PNL 24H</text>
+      <text x="8" y="24" font-size="11" font-weight="700" fill="#00FFD5">+4.87%
+        <animate attributeName="opacity" values="1;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+</svg>

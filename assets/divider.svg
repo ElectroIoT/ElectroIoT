@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ElectroIoT - Glowing Section Divider
+  A neon rail with a travelling energy pulse, circuit nodes and a centre diamond.
+  Used between every README section.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40" width="1200" height="40"
+     role="img" aria-label="Glowing neon section divider">
+  <title>ElectroIoT - divider</title>
+
+  <defs>
+    <linearGradient id="dRail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00C8FF" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#0066FF" stop-opacity="0.75"/>
+      <stop offset="50%"  stop-color="#00FFD5" stop-opacity="1"/>
+      <stop offset="82%"  stop-color="#0066FF" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="dPulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00FFD5" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#EAF6FF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="dGlow" x="-50%" y="-400%" width="200%" height="900%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main rail -->
+  <rect x="0" y="19" width="1200" height="2" fill="url(#dRail)" filter="url(#dGlow)"/>
+
+  <!-- Soft halo -->
+  <rect x="0" y="16" width="1200" height="8" fill="url(#dRail)" opacity="0.16"/>
+
+  <!-- Travelling pulse -->
+  <rect y="18.2" width="220" height="3.6" rx="1.8" fill="url(#dPulse)" filter="url(#dGlow)">
+    <animate attributeName="x" values="-220;1200" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Circuit stubs -->
+  <g stroke="#00C8FF" stroke-opacity="0.45" stroke-width="1.4" fill="none">
+    <path d="M300 20 v-8 h24"/>
+    <path d="M900 20 v8 h-24"/>
+    <path d="M420 20 v6 h-18"/>
+    <path d="M780 20 v-6 h18"/>
+  </g>
+  <g fill="#050816" stroke="#00C8FF" stroke-width="1.2">
+    <circle cx="324" cy="12" r="2.6"/>
+    <circle cx="876" cy="28" r="2.6"/>
+    <circle cx="402" cy="26" r="2.2"/>
+    <circle cx="798" cy="14" r="2.2"/>
+  </g>
+
+  <!-- Centre diamond -->
+  <g transform="translate(600 20)" filter="url(#dGlow)">
+    <rect x="-7" y="-7" width="14" height="14" transform="rotate(45)"
+          fill="#050816" stroke="#00FFD5" stroke-width="1.8">
+      <animateTransform attributeName="transform" type="rotate" from="45" to="405"
+                        dur="10s" repeatCount="indefinite"/>
+    </rect>
+    <circle r="2.6" fill="#00FFD5">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

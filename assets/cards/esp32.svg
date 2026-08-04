@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ElectroIoT card - ESP32 Projects -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150"
+     role="img" aria-label="ESP32 Projects card">
+  <title>ESP32 Projects - firmware and connected devices</title>
+  <defs>
+    <linearGradient id="e32-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="e32-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00FFD5"/><stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="e32-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00FFD5" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00FFD5" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="e32-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FFD5" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="e32-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="e32-clip"><rect x="2" y="2" width="376" height="146" rx="16"/></clipPath>
+  </defs>
+
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="url(#e32-bg)" stroke="url(#e32-edge)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="none" stroke="#00FFD5"
+        stroke-opacity="0.16" stroke-width="6" filter="url(#e32-glow)"/>
+
+  <g clip-path="url(#e32-clip)">
+    <rect x="-140" y="0" width="120" height="150" fill="url(#e32-sheen)">
+      <animate attributeName="x" values="-140;400" dur="6s" begin="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="52" cy="56" r="46" fill="url(#e32-halo)"/>
+  </g>
+
+  <g transform="translate(26 30)">
+    <rect x="0" y="0" width="52" height="52" rx="14" fill="#0b1730" stroke="#00FFD5" stroke-opacity="0.55"/>
+    <rect x="15" y="15" width="22" height="22" rx="4" fill="#08122b" stroke="#00C8FF" stroke-width="1.5"/>
+    <rect x="21" y="21" width="10" height="10" rx="2" fill="#00FFD5" opacity="0.8">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <g stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+      <line x1="15" y1="20" x2="9" y2="20"/><line x1="15" y1="26" x2="9" y2="26"/><line x1="15" y1="32" x2="9" y2="32"/>
+      <line x1="37" y1="20" x2="43" y2="20"/><line x1="37" y1="26" x2="43" y2="26"/><line x1="37" y1="32" x2="43" y2="32"/>
+      <line x1="20" y1="15" x2="20" y2="9"/><line x1="26" y1="15" x2="26" y2="9"/><line x1="32" y1="15" x2="32" y2="9"/>
+      <line x1="20" y1="37" x2="20" y2="43"/><line x1="26" y1="37" x2="26" y2="43"/><line x1="32" y1="37" x2="32" y2="43"/>
+    </g>
+  </g>
+
+  <text x="96" y="46" font-family="'Segoe UI',system-ui,sans-serif" font-size="17"
+        font-weight="800" fill="#EAF6FF">ESP32 Projects</text>
+  <text x="96" y="68" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">OTA-updatable firmware, deep-sleep sensors and</text>
+  <text x="96" y="83" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">captive-portal provisioning.</text>
+
+  <g font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" font-weight="700" letter-spacing="1">
+    <rect x="96"  y="98" width="66" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="129" y="110" text-anchor="middle" fill="#00C8FF">ESP-IDF</text>
+    <rect x="168" y="98" width="58" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="197" y="110" text-anchor="middle" fill="#00C8FF">ARDUINO</text>
+    <rect x="232" y="98" width="44" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="254" y="110" text-anchor="middle" fill="#00C8FF">C++</text>
+  </g>
+
+  <rect x="26" y="128" width="0" height="2.5" rx="1.25" fill="url(#e32-edge)" filter="url(#e32-glow)">
+    <animate attributeName="width" values="0;326;326;0" keyTimes="0;0.4;0.8;1" dur="5s" begin="2s" repeatCount="indefinite"/>
+  </rect>
+</svg>

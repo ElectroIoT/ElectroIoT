@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ElectroIoT card - Trading Dashboard -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150"
+     role="img" aria-label="Trading Dashboard card">
+  <title>Trading Dashboard - realtime market analytics</title>
+  <defs>
+    <linearGradient id="td-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="td-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00FFD5"/><stop offset="100%" stop-color="#00C8FF"/>
+    </linearGradient>
+    <linearGradient id="td-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00FFD5" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00FFD5" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="td-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FFD5" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="td-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="td-clip"><rect x="2" y="2" width="376" height="146" rx="16"/></clipPath>
+  </defs>
+
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="url(#td-bg)" stroke="url(#td-edge)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="376" height="146" rx="16" fill="none" stroke="#00FFD5"
+        stroke-opacity="0.16" stroke-width="6" filter="url(#td-glow)"/>
+
+  <g clip-path="url(#td-clip)">
+    <rect x="-140" y="0" width="120" height="150" fill="url(#td-sheen)">
+      <animate attributeName="x" values="-140;400" dur="6s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="52" cy="56" r="46" fill="url(#td-halo)"/>
+  </g>
+
+  <g transform="translate(26 30)">
+    <rect x="0" y="0" width="52" height="52" rx="14" fill="#0b1730" stroke="#00FFD5" stroke-opacity="0.55"/>
+    <polyline points="10,36 19,26 27,30 35,16 43,22" fill="none" stroke="#00FFD5" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="70" stroke-dashoffset="70">
+      <animate attributeName="stroke-dashoffset" values="70;0;0;70" dur="5s" repeatCount="indefinite"/>
+    </polyline>
+    <circle cx="43" cy="22" r="2.6" fill="#00FFD5" filter="url(#td-glow)"/>
+    <g stroke="#00C8FF" stroke-opacity="0.35" stroke-width="1">
+      <line x1="10" y1="42" x2="43" y2="42"/>
+    </g>
+  </g>
+
+  <text x="96" y="46" font-family="'Segoe UI',system-ui,sans-serif" font-size="17"
+        font-weight="800" fill="#EAF6FF">Trading Dashboard</text>
+  <text x="96" y="68" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">WebSocket market feeds, strategy backtests and</text>
+  <text x="96" y="83" font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5"
+        fill="#00C8FF" opacity="0.85">a live risk / PnL console.</text>
+
+  <g font-family="'Segoe UI',system-ui,sans-serif" font-size="8.5" font-weight="700" letter-spacing="1">
+    <rect x="96"  y="98" width="56" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="124" y="110" text-anchor="middle" fill="#00C8FF">LARAVEL</text>
+    <rect x="158" y="98" width="46" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="181" y="110" text-anchor="middle" fill="#00C8FF">VUE</text>
+    <rect x="210" y="98" width="72" height="18" rx="9" fill="#0066FF" fill-opacity="0.18" stroke="#00C8FF" stroke-opacity="0.4"/>
+    <text x="246" y="110" text-anchor="middle" fill="#00C8FF">WEBSOCKET</text>
+  </g>
+
+  <rect x="26" y="128" width="0" height="2.5" rx="1.25" fill="url(#td-edge)" filter="url(#td-glow)">
+    <animate attributeName="width" values="0;326;326;0" keyTimes="0;0.4;0.8;1" dur="5s" begin="0.8s" repeatCount="indefinite"/>
+  </rect>
+</svg>
