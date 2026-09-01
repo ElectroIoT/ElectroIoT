@@ -1495,3 +1495,5 @@ weekend of reverse engineering, the most useful things you can do are:
 </sub>
 
 </div>
+
+<!-- verified render 2026-09 -->
