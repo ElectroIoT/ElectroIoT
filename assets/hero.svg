@@ -3,7 +3,7 @@
   ElectroIoT - Animated Hero Banner
   =================================
   Pure SMIL + CSS animation (no JavaScript) so it renders inside GitHub Markdown.
-  Palette: #00C8FF primary - #0066FF secondary - #00FFD5 accent - #050816 background
+  Palette: #E68E1F primary - #2F4468 secondary - #FFB600 accent - #050816 background
   Scene: cyberpunk skyline - circuit board - solar array - ESP32 - AI mesh - trading chart
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -21,23 +21,23 @@
     </linearGradient>
 
     <linearGradient id="neonGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#0066FF"/>
-      <stop offset="50%"  stop-color="#00C8FF"/>
-      <stop offset="100%" stop-color="#00FFD5"/>
+      <stop offset="0%"   stop-color="#2F4468"/>
+      <stop offset="50%"  stop-color="#E68E1F"/>
+      <stop offset="100%" stop-color="#FFB600"/>
     </linearGradient>
 
     <linearGradient id="neonGradMoving" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#0066FF"/>
-      <stop offset="50%"  stop-color="#00FFD5"/>
-      <stop offset="100%" stop-color="#0066FF"/>
+      <stop offset="0%"   stop-color="#2F4468"/>
+      <stop offset="50%"  stop-color="#FFB600"/>
+      <stop offset="100%" stop-color="#2F4468"/>
       <animateTransform attributeName="gradientTransform" type="translate"
                         values="-1 0; 1 0; -1 0" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
 
     <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#00C8FF" stop-opacity="0.14"/>
+      <stop offset="0%"   stop-color="#E68E1F" stop-opacity="0.14"/>
       <stop offset="45%"  stop-color="#111827" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#0066FF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#2F4468" stop-opacity="0.10"/>
     </linearGradient>
 
     <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
@@ -47,19 +47,19 @@
     </linearGradient>
 
     <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#00FFD5" stop-opacity="0.42"/>
-      <stop offset="100%" stop-color="#00FFD5" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#FFB600" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#FFB600" stop-opacity="0"/>
     </linearGradient>
 
     <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#00FFD5" stop-opacity="0.55"/>
-      <stop offset="60%"  stop-color="#00C8FF" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#00C8FF" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#FFB600" stop-opacity="0.55"/>
+      <stop offset="60%"  stop-color="#E68E1F" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#E68E1F" stop-opacity="0"/>
     </radialGradient>
 
     <radialGradient id="cityHaze" cx="50%" cy="100%" r="70%">
-      <stop offset="0%"   stop-color="#0066FF" stop-opacity="0.34"/>
-      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#2F4468" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#2F4468" stop-opacity="0"/>
     </radialGradient>
 
     <radialGradient id="vignette" cx="50%" cy="50%" r="72%">
@@ -89,11 +89,11 @@
 
     <!-- ============================= PATTERNS ============================ -->
     <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0 H0 V40" fill="none" stroke="#00C8FF" stroke-opacity="0.08" stroke-width="1"/>
+      <path d="M40 0 H0 V40" fill="none" stroke="#E68E1F" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
 
     <pattern id="cellPattern" width="14" height="14" patternUnits="userSpaceOnUse">
-      <rect width="14" height="14" fill="none" stroke="#00C8FF" stroke-opacity="0.30" stroke-width="0.7"/>
+      <rect width="14" height="14" fill="none" stroke="#E68E1F" stroke-opacity="0.30" stroke-width="0.7"/>
     </pattern>
 
     <!-- ======================= CLIPS / REUSABLE PATHS ==================== -->
@@ -123,7 +123,7 @@
     <ellipse cx="600" cy="420" rx="620" ry="220" fill="url(#cityHaze)"/>
 
     <!-- ========== Perspective floor: horizontal scan lines drifting ====== -->
-    <g stroke="#00C8FF" stroke-opacity="0.16" stroke-width="1">
+    <g stroke="#E68E1F" stroke-opacity="0.16" stroke-width="1">
       <line x1="0" y1="330" x2="1200" y2="330">
         <animate attributeName="y1" values="330;420" dur="6s" repeatCount="indefinite"/>
         <animate attributeName="y2" values="330;420" dur="6s" repeatCount="indefinite"/>
@@ -144,7 +144,7 @@
     <!-- ====================== Cyberpunk skyline ========================== -->
     <g opacity="0.85">
       <!-- Far towers -->
-      <g fill="#0a1330" stroke="#0066FF" stroke-opacity="0.35" stroke-width="1">
+      <g fill="#0a1330" stroke="#2F4468" stroke-opacity="0.35" stroke-width="1">
         <rect x="40"   y="196" width="46"  height="150"/>
         <rect x="96"   y="228" width="34"  height="118"/>
         <rect x="140"  y="170" width="52"  height="176"/>
@@ -155,11 +155,11 @@
         <rect x="1128" y="212" width="34"  height="134"/>
       </g>
       <!-- Antennae with pulsing beacons -->
-      <g stroke="#00C8FF" stroke-width="1.4" filter="url(#glowSm)">
+      <g stroke="#E68E1F" stroke-width="1.4" filter="url(#glowSm)">
         <line x1="166" y1="170" x2="166" y2="140"/>
         <line x1="1091" y1="160" x2="1091" y2="126"/>
       </g>
-      <g fill="#00FFD5" filter="url(#glowMd)">
+      <g fill="#FFB600" filter="url(#glowMd)">
         <circle cx="166" cy="138" r="2.6">
           <animate attributeName="opacity" values="1;0.15;1" dur="2.2s" repeatCount="indefinite"/>
         </circle>
@@ -168,7 +168,7 @@
         </circle>
       </g>
       <!-- Blinking windows -->
-      <g fill="#00C8FF">
+      <g fill="#E68E1F">
         <rect x="50"  y="210" width="6" height="6" opacity="0.8">
           <animate attributeName="opacity" values="0.8;0.15;0.8" dur="3.1s" repeatCount="indefinite"/></rect>
         <rect x="64"  y="228" width="6" height="6" opacity="0.4">
@@ -197,7 +197,7 @@
     </g>
 
     <!-- ======================== Circuit traces =========================== -->
-    <g fill="none" stroke="#00C8FF" stroke-opacity="0.30" stroke-width="1.4" stroke-linecap="round">
+    <g fill="none" stroke="#E68E1F" stroke-opacity="0.30" stroke-width="1.4" stroke-linecap="round">
       <path d="M0 96 H120 L146 70 H240"/>
       <path d="M0 132 H86 L112 158 H206 L226 138 H300"/>
       <path d="M1200 100 H1084 L1058 74 H972"/>
@@ -206,7 +206,7 @@
       <path d="M1200 366 H1046 L1020 340 H932"/>
     </g>
     <!-- Energy pulses running along the traces -->
-    <g stroke="#00FFD5" stroke-width="2.2" stroke-linecap="round" filter="url(#glowMd)" fill="none">
+    <g stroke="#FFB600" stroke-width="2.2" stroke-linecap="round" filter="url(#glowMd)" fill="none">
       <path d="M0 96 H120 L146 70 H240" stroke-dasharray="26 460" stroke-dashoffset="0">
         <animate attributeName="stroke-dashoffset" values="486;0" dur="3.4s" repeatCount="indefinite"/>
       </path>
@@ -224,7 +224,7 @@
       </path>
     </g>
     <!-- Trace solder pads -->
-    <g fill="#050816" stroke="#00C8FF" stroke-width="1.2">
+    <g fill="#050816" stroke="#E68E1F" stroke-width="1.2">
       <circle cx="240" cy="70" r="3.4"/>
       <circle cx="300" cy="138" r="3.4"/>
       <circle cx="972" cy="74" r="3.4"/>
@@ -245,30 +245,30 @@
       <!-- Panel A -->
       <g transform="skewX(-16)">
         <rect x="0" y="0" width="70" height="44" rx="3" fill="url(#panelGrad)"
-              stroke="#00C8FF" stroke-opacity="0.65" stroke-width="1.2"/>
+              stroke="#E68E1F" stroke-opacity="0.65" stroke-width="1.2"/>
         <rect x="0" y="0" width="70" height="44" rx="3" fill="url(#cellPattern)" opacity="0.55"/>
-        <rect x="0" y="0" width="70" height="44" rx="3" fill="#00FFD5" opacity="0">
+        <rect x="0" y="0" width="70" height="44" rx="3" fill="#FFB600" opacity="0">
           <animate attributeName="opacity" values="0;0.22;0" dur="4s" repeatCount="indefinite"/>
         </rect>
       </g>
       <!-- Panel B -->
       <g transform="translate(84 0) skewX(-16)">
         <rect x="0" y="0" width="70" height="44" rx="3" fill="url(#panelGrad)"
-              stroke="#00C8FF" stroke-opacity="0.65" stroke-width="1.2"/>
+              stroke="#E68E1F" stroke-opacity="0.65" stroke-width="1.2"/>
         <rect x="0" y="0" width="70" height="44" rx="3" fill="url(#cellPattern)" opacity="0.55"/>
-        <rect x="0" y="0" width="70" height="44" rx="3" fill="#00FFD5" opacity="0">
+        <rect x="0" y="0" width="70" height="44" rx="3" fill="#FFB600" opacity="0">
           <animate attributeName="opacity" values="0;0.22;0" dur="4s" begin="1.3s" repeatCount="indefinite"/>
         </rect>
       </g>
       <!-- Mounting legs -->
-      <g stroke="#0066FF" stroke-width="2" stroke-opacity="0.7">
+      <g stroke="#2F4468" stroke-width="2" stroke-opacity="0.7">
         <line x1="14" y1="44" x2="18" y2="62"/>
         <line x1="58" y1="44" x2="62" y2="62"/>
         <line x1="98" y1="44" x2="102" y2="62"/>
         <line x1="142" y1="44" x2="146" y2="62"/>
       </g>
       <!-- Harvested-energy sparks rising toward the inverter -->
-      <g fill="#00FFD5" filter="url(#glowMd)">
+      <g fill="#FFB600" filter="url(#glowMd)">
         <circle cx="40" cy="0" r="2">
           <animate attributeName="cy" values="0;-42" dur="2.4s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="1;0" dur="2.4s" repeatCount="indefinite"/>
@@ -279,7 +279,7 @@
         </circle>
       </g>
       <text x="0" y="80" font-family="'Segoe UI',system-ui,sans-serif" font-size="11"
-            font-weight="600" letter-spacing="2" fill="#00C8FF" opacity="0.75">SOLAR &#183; MPPT &#183; BMS</text>
+            font-weight="600" letter-spacing="2" fill="#E68E1F" opacity="0.75">SOLAR &#183; MPPT &#183; BMS</text>
     </g>
 
     <!-- =================================================================== -->
@@ -287,7 +287,7 @@
     <!-- =================================================================== -->
     <g transform="translate(96 128)">
       <!-- pins -->
-      <g fill="#00C8FF" opacity="0.75">
+      <g fill="#E68E1F" opacity="0.75">
         <rect x="-7" y="8"  width="7" height="3" rx="1"/>
         <rect x="-7" y="20" width="7" height="3" rx="1"/>
         <rect x="-7" y="32" width="7" height="3" rx="1"/>
@@ -301,16 +301,16 @@
             stroke="url(#neonGrad)" stroke-width="1.6"/>
       <!-- shielded WiFi can -->
       <rect x="8" y="8" width="30" height="26" rx="3" fill="#0f2145"
-            stroke="#00C8FF" stroke-opacity="0.6" stroke-width="1"/>
+            stroke="#E68E1F" stroke-opacity="0.6" stroke-width="1"/>
       <!-- die -->
       <rect x="48" y="14" width="26" height="26" rx="3" fill="#08122b"
-            stroke="#00FFD5" stroke-opacity="0.75" stroke-width="1">
+            stroke="#FFB600" stroke-opacity="0.75" stroke-width="1">
         <animate attributeName="stroke-opacity" values="0.35;1;0.35" dur="2.6s" repeatCount="indefinite"/>
       </rect>
       <text x="52" y="31" font-family="'Segoe UI',system-ui,sans-serif" font-size="8"
-            font-weight="700" fill="#00FFD5" opacity="0.9">ESP</text>
+            font-weight="700" fill="#FFB600" opacity="0.9">ESP</text>
       <!-- radiating wifi arcs -->
-      <g fill="none" stroke="#00C8FF" stroke-width="1.5" stroke-linecap="round" filter="url(#glowSm)">
+      <g fill="none" stroke="#E68E1F" stroke-width="1.5" stroke-linecap="round" filter="url(#glowSm)">
         <path d="M18 6 A 14 14 0 0 1 34 6" opacity="0">
           <animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite"/>
         </path>
@@ -322,14 +322,14 @@
         </path>
       </g>
       <text x="0" y="74" font-family="'Segoe UI',system-ui,sans-serif" font-size="11"
-            font-weight="600" letter-spacing="2" fill="#00C8FF" opacity="0.75">ESP32 &#183; MQTT</text>
+            font-weight="600" letter-spacing="2" fill="#E68E1F" opacity="0.75">ESP32 &#183; MQTT</text>
     </g>
 
     <!-- =================================================================== -->
     <!--  AI NEURAL MESH (top-right)                                         -->
     <!-- =================================================================== -->
     <g transform="translate(946 58)">
-      <g stroke="#0066FF" stroke-opacity="0.55" stroke-width="1">
+      <g stroke="#2F4468" stroke-opacity="0.55" stroke-width="1">
         <line x1="20" y1="26" x2="88" y2="10"/>
         <line x1="20" y1="26" x2="88" y2="52"/>
         <line x1="20" y1="26" x2="88" y2="94"/>
@@ -341,7 +341,7 @@
         <line x1="88" y1="94" x2="164" y2="52"/>
       </g>
       <!-- signal packets travelling the synapses -->
-      <g fill="#00FFD5" filter="url(#glowSm)">
+      <g fill="#FFB600" filter="url(#glowSm)">
         <circle r="2.4">
           <animateMotion path="M20 26 L88 52 L164 52" dur="2.8s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="0;1;1;0" dur="2.8s" repeatCount="indefinite"/>
@@ -356,18 +356,18 @@
         </circle>
       </g>
       <!-- neurons -->
-      <g fill="#050816" stroke="#00C8FF" stroke-width="1.6" filter="url(#glowSm)">
+      <g fill="#050816" stroke="#E68E1F" stroke-width="1.6" filter="url(#glowSm)">
         <circle cx="20"  cy="26" r="6"><animate attributeName="r" values="6;7.4;6" dur="3s" repeatCount="indefinite"/></circle>
         <circle cx="20"  cy="74" r="6"><animate attributeName="r" values="6;7.4;6" dur="3s" begin="0.5s" repeatCount="indefinite"/></circle>
         <circle cx="88"  cy="10" r="6"><animate attributeName="r" values="6;7.4;6" dur="3s" begin="1s"   repeatCount="indefinite"/></circle>
         <circle cx="88"  cy="52" r="6"><animate attributeName="r" values="6;7.4;6" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
         <circle cx="88"  cy="94" r="6"><animate attributeName="r" values="6;7.4;6" dur="3s" begin="2s"   repeatCount="indefinite"/></circle>
       </g>
-      <circle cx="164" cy="52" r="9" fill="#050816" stroke="#00FFD5" stroke-width="2" filter="url(#glowMd)">
+      <circle cx="164" cy="52" r="9" fill="#050816" stroke="#FFB600" stroke-width="2" filter="url(#glowMd)">
         <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
       </circle>
       <text x="4" y="122" font-family="'Segoe UI',system-ui,sans-serif" font-size="11"
-            font-weight="600" letter-spacing="2" fill="#00C8FF" opacity="0.75">AI &#183; INFERENCE</text>
+            font-weight="600" letter-spacing="2" fill="#E68E1F" opacity="0.75">AI &#183; INFERENCE</text>
     </g>
 
     <!-- =================================================================== -->
@@ -375,9 +375,9 @@
     <!-- =================================================================== -->
     <g transform="translate(936 268)">
       <rect x="-12" y="-24" width="216" height="106" rx="12"
-            fill="#111827" fill-opacity="0.55" stroke="#00C8FF" stroke-opacity="0.28"/>
+            fill="#111827" fill-opacity="0.55" stroke="#E68E1F" stroke-opacity="0.28"/>
       <!-- gridlines -->
-      <g stroke="#00C8FF" stroke-opacity="0.12">
+      <g stroke="#E68E1F" stroke-opacity="0.12">
         <line x1="0" y1="0"  x2="192" y2="0"/>
         <line x1="0" y1="20" x2="192" y2="20"/>
         <line x1="0" y1="40" x2="192" y2="40"/>
@@ -387,38 +387,38 @@
       <path d="M0 56 L24 44 L48 50 L72 30 L96 38 L120 18 L144 26 L168 8 L192 14 L192 60 L0 60 Z"
             fill="url(#chartFill)"/>
       <path d="M0 56 L24 44 L48 50 L72 30 L96 38 L120 18 L144 26 L168 8 L192 14"
-            fill="none" stroke="#00FFD5" stroke-width="2" stroke-linejoin="round"
+            fill="none" stroke="#FFB600" stroke-width="2" stroke-linejoin="round"
             filter="url(#glowSm)" stroke-dasharray="420" stroke-dashoffset="420">
         <animate attributeName="stroke-dashoffset" values="420;0;0;420" keyTimes="0;0.45;0.85;1"
                  dur="7s" repeatCount="indefinite"/>
       </path>
       <!-- last-price marker -->
-      <circle cx="192" cy="14" r="3.4" fill="#00FFD5" filter="url(#glowMd)">
+      <circle cx="192" cy="14" r="3.4" fill="#FFB600" filter="url(#glowMd)">
         <animate attributeName="r" values="3.4;5.4;3.4" dur="1.8s" repeatCount="indefinite"/>
       </circle>
       <!-- candles -->
-      <g stroke="#00C8FF" stroke-opacity="0.5" stroke-width="3">
+      <g stroke="#E68E1F" stroke-opacity="0.5" stroke-width="3">
         <line x1="12"  y1="52" x2="12"  y2="62"/>
         <line x1="60"  y1="44" x2="60"  y2="58"/>
         <line x1="108" y1="26" x2="108" y2="46"/>
         <line x1="156" y1="16" x2="156" y2="34"/>
       </g>
       <text x="-4" y="78" font-family="'Segoe UI',system-ui,sans-serif" font-size="11"
-            font-weight="600" letter-spacing="2" fill="#00C8FF" opacity="0.75">TRADING &#183; AUTOMATION</text>
+            font-weight="600" letter-spacing="2" fill="#E68E1F" opacity="0.75">TRADING &#183; AUTOMATION</text>
     </g>
 
     <!-- =================================================================== -->
     <!--  CENTRE GLASS CARD                                                  -->
     <!-- =================================================================== -->
     <g>
-      <rect x="300" y="96" width="600" height="228" rx="22" fill="#00C8FF" opacity="0.10" filter="url(#softBlur)"/>
+      <rect x="300" y="96" width="600" height="228" rx="22" fill="#E68E1F" opacity="0.10" filter="url(#softBlur)"/>
       <rect x="300" y="96" width="600" height="228" rx="22" fill="url(#glassGrad)"
             stroke="url(#neonGradMoving)" stroke-width="1.6"/>
       <!-- top sheen -->
       <path d="M312 118 Q600 96 888 118" fill="none" stroke="#EAF6FF" stroke-opacity="0.18" stroke-width="1"/>
 
       <!-- corner brackets -->
-      <g fill="none" stroke="#00FFD5" stroke-width="2" stroke-linecap="round" opacity="0.85">
+      <g fill="none" stroke="#FFB600" stroke-width="2" stroke-linecap="round" opacity="0.85">
         <path d="M316 132 V116 H332"/>
         <path d="M884 132 V116 H868"/>
         <path d="M316 288 V304 H332"/>
@@ -427,9 +427,9 @@
 
       <!-- Avatar ring (profile image placeholder) -->
       <g transform="translate(378 186)">
-        <circle r="46" fill="none" stroke="#00C8FF" stroke-opacity="0.25" stroke-width="1"/>
+        <circle r="46" fill="none" stroke="#E68E1F" stroke-opacity="0.25" stroke-width="1"/>
         <circle r="40" fill="#0b1730" stroke="url(#neonGrad)" stroke-width="2" filter="url(#glowSm)"/>
-        <circle r="46" fill="none" stroke="#00FFD5" stroke-width="2" stroke-linecap="round"
+        <circle r="46" fill="none" stroke="#FFB600" stroke-width="2" stroke-linecap="round"
                 stroke-dasharray="40 249" filter="url(#glowMd)">
           <animateTransform attributeName="transform" type="rotate" from="0" to="360"
                             dur="9s" repeatCount="indefinite"/>
@@ -440,30 +440,30 @@
 
       <!-- Wordmark -->
       <text x="450" y="176" font-family="'Segoe UI',system-ui,sans-serif" font-size="44"
-            font-weight="800" letter-spacing="1" fill="#EAF6FF">Electro<tspan fill="#00C8FF">IoT</tspan></text>
+            font-weight="800" letter-spacing="1" fill="#EAF6FF">Electro<tspan fill="#E68E1F">IoT</tspan></text>
       <text x="452" y="204" font-family="'Segoe UI',system-ui,sans-serif" font-size="13"
-            font-weight="600" letter-spacing="4.5" fill="#00FFD5" opacity="0.9">
+            font-weight="600" letter-spacing="4.5" fill="#FFB600" opacity="0.9">
         BUILDING THE CONNECTED WORLD
       </text>
 
       <!-- Animated "typing" role line (clip-path reveal + blinking caret) -->
       <g clip-path="url(#typeClip)">
         <text x="332" y="258" font-family="'Consolas','SF Mono',monospace" font-size="17"
-              font-weight="600" fill="#00C8FF" opacity="0">
+              font-weight="600" fill="#E68E1F" opacity="0">
           Laravel &#183; PHP &#183; Vue &#183; Tailwind
           <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;0;1"
                    keyTimes="0;0.32;0.335;0.34;0.66;0.665;0.98;0.985;0.99;1"
                    dur="14s" repeatCount="indefinite"/>
         </text>
         <text x="332" y="258" font-family="'Consolas','SF Mono',monospace" font-size="17"
-              font-weight="600" fill="#00C8FF" opacity="0">
+              font-weight="600" fill="#E68E1F" opacity="0">
           ESP32 &#183; MQTT &#183; Home Assistant
           <animate attributeName="opacity" values="0;0;1;1;0;0"
                    keyTimes="0;0.34;0.345;0.66;0.665;1"
                    dur="14s" repeatCount="indefinite"/>
         </text>
         <text x="332" y="258" font-family="'Consolas','SF Mono',monospace" font-size="17"
-              font-weight="600" fill="#00C8FF" opacity="0">
+              font-weight="600" fill="#E68E1F" opacity="0">
           Solar Automation &#183; AI &#183; Trading
           <animate attributeName="opacity" values="0;0;1;1;0"
                    keyTimes="0;0.665;0.67;0.98;0.985"
@@ -471,7 +471,7 @@
         </text>
       </g>
       <!-- caret follows the reveal edge -->
-      <rect y="240" width="2.5" height="22" fill="#00FFD5" filter="url(#glowSm)">
+      <rect y="240" width="2.5" height="22" fill="#FFB600" filter="url(#glowSm)">
         <animate attributeName="x"
                  values="332;332;582;582;332;332;547;547;332;332;597;597;332"
                  keyTimes="0;0.02;0.16;0.30;0.34;0.36;0.50;0.64;0.68;0.70;0.84;0.96;1"
@@ -483,48 +483,48 @@
       <!-- Chips row -->
       <g font-family="'Segoe UI',system-ui,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1">
         <g>
-          <rect x="332" y="278" width="92" height="24" rx="12" fill="#0066FF" fill-opacity="0.16"
-                stroke="#00C8FF" stroke-opacity="0.45"/>
-          <text x="378" y="294" text-anchor="middle" fill="#00C8FF">FULL STACK</text>
+          <rect x="332" y="278" width="92" height="24" rx="12" fill="#2F4468" fill-opacity="0.16"
+                stroke="#E68E1F" stroke-opacity="0.45"/>
+          <text x="378" y="294" text-anchor="middle" fill="#E68E1F">FULL STACK</text>
         </g>
         <g>
-          <rect x="434" y="278" width="70" height="24" rx="12" fill="#0066FF" fill-opacity="0.16"
-                stroke="#00C8FF" stroke-opacity="0.45"/>
-          <text x="469" y="294" text-anchor="middle" fill="#00C8FF">IoT</text>
+          <rect x="434" y="278" width="70" height="24" rx="12" fill="#2F4468" fill-opacity="0.16"
+                stroke="#E68E1F" stroke-opacity="0.45"/>
+          <text x="469" y="294" text-anchor="middle" fill="#E68E1F">IoT</text>
         </g>
         <g>
-          <rect x="514" y="278" width="80" height="24" rx="12" fill="#0066FF" fill-opacity="0.16"
-                stroke="#00C8FF" stroke-opacity="0.45"/>
-          <text x="554" y="294" text-anchor="middle" fill="#00C8FF">SOLAR</text>
+          <rect x="514" y="278" width="80" height="24" rx="12" fill="#2F4468" fill-opacity="0.16"
+                stroke="#E68E1F" stroke-opacity="0.45"/>
+          <text x="554" y="294" text-anchor="middle" fill="#E68E1F">SOLAR</text>
         </g>
         <g>
-          <rect x="604" y="278" width="64" height="24" rx="12" fill="#0066FF" fill-opacity="0.16"
-                stroke="#00C8FF" stroke-opacity="0.45"/>
-          <text x="636" y="294" text-anchor="middle" fill="#00C8FF">AI</text>
+          <rect x="604" y="278" width="64" height="24" rx="12" fill="#2F4468" fill-opacity="0.16"
+                stroke="#E68E1F" stroke-opacity="0.45"/>
+          <text x="636" y="294" text-anchor="middle" fill="#E68E1F">AI</text>
         </g>
         <g>
-          <rect x="678" y="278" width="88" height="24" rx="12" fill="#0066FF" fill-opacity="0.16"
-                stroke="#00C8FF" stroke-opacity="0.45"/>
-          <text x="722" y="294" text-anchor="middle" fill="#00C8FF">AUTOMATION</text>
+          <rect x="678" y="278" width="88" height="24" rx="12" fill="#2F4468" fill-opacity="0.16"
+                stroke="#E68E1F" stroke-opacity="0.45"/>
+          <text x="722" y="294" text-anchor="middle" fill="#E68E1F">AUTOMATION</text>
         </g>
       </g>
 
       <!-- Live status pill -->
       <g transform="translate(788 118)">
-        <rect x="0" y="0" width="96" height="22" rx="11" fill="#00FFD5" fill-opacity="0.10"
-              stroke="#00FFD5" stroke-opacity="0.5"/>
-        <circle cx="13" cy="11" r="3.2" fill="#00FFD5" filter="url(#glowSm)">
+        <rect x="0" y="0" width="96" height="22" rx="11" fill="#FFB600" fill-opacity="0.10"
+              stroke="#FFB600" stroke-opacity="0.5"/>
+        <circle cx="13" cy="11" r="3.2" fill="#FFB600" filter="url(#glowSm)">
           <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
         </circle>
         <text x="24" y="15" font-family="'Segoe UI',system-ui,sans-serif" font-size="9.5"
-              font-weight="700" letter-spacing="1.4" fill="#00FFD5">AVAILABLE</text>
+              font-weight="700" letter-spacing="1.4" fill="#FFB600">AVAILABLE</text>
       </g>
     </g>
 
     <!-- =================================================================== -->
     <!--  FLOATING PARTICLES                                                 -->
     <!-- =================================================================== -->
-    <g fill="#00C8FF">
+    <g fill="#E68E1F">
       <circle cx="252" cy="360" r="1.8" opacity="0.8">
         <animate attributeName="cy" values="360;120" dur="11s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
@@ -560,7 +560,7 @@
     </g>
 
     <!-- ========================= Scanline sweep ========================== -->
-    <rect x="-260" y="0" width="220" height="420" fill="#00C8FF" opacity="0.045">
+    <rect x="-260" y="0" width="220" height="420" fill="#E68E1F" opacity="0.045">
       <animate attributeName="x" values="-260;1240" dur="9s" repeatCount="indefinite"/>
     </rect>
 
