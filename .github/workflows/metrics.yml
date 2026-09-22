@@ -14,11 +14,16 @@
 #    metrics/metrics.habits.svg           coding habits and time-of-day charts
 #    metrics/metrics.stars.svg            most starred repositories
 #
-#  REQUIRED SECRET: METRICS_TOKEN
+#  OPTIONAL SECRET: METRICS_TOKEN
 #    A classic Personal Access Token with the `public_repo` scope (add `repo`
 #    and `read:org` if you also want private/organisation data).
 #    Repository → Settings → Secrets and variables → Actions → New secret.
 #    Full walkthrough in setup-guide.md.
+#
+#    If METRICS_TOKEN is not set, every step below falls back to the
+#    auto-generated ${{ secrets.GITHUB_TOKEN }} so the panels still render
+#    for public data instead of failing outright and leaving the README with
+#    eight broken images. Add METRICS_TOKEN later for private/org metrics.
 # ============================================================================
 
 name: GitHub Metrics
@@ -57,7 +62,7 @@ jobs:
       - name: Overview
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.svg
           template: classic
@@ -77,7 +82,7 @@ jobs:
       - name: Achievements
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.achievements.svg
           base: ""
@@ -95,7 +100,7 @@ jobs:
       - name: Languages
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.languages.svg
           base: ""
@@ -114,7 +119,7 @@ jobs:
       - name: Isometric calendar
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.isocalendar.svg
           base: ""
@@ -128,7 +133,7 @@ jobs:
       - name: Calendar
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.calendar.svg
           base: ""
@@ -142,7 +147,7 @@ jobs:
       - name: Lines of code
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.lines.svg
           base: ""
@@ -157,7 +162,7 @@ jobs:
       - name: Habits
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.habits.svg
           base: ""
@@ -175,7 +180,7 @@ jobs:
       - name: Featured repositories
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: metrics/metrics.stars.svg
           base: ""
