@@ -110,6 +110,7 @@
     <td align="center"><a href="#services"><b>Services</b></a></td>
     <td align="center"><a href="#capabilities"><b>Capabilities</b></a></td>
     <td align="center"><a href="#projects"><b>Projects</b></a></td>
+    <td align="center"><a href="#hardware-parts"><b>Hardware Parts</b></a></td>
     <td align="center"><a href="#open-source"><b>Open Source</b></a></td>
   </tr>
   <tr>
@@ -829,7 +830,53 @@ portal; updates arrive over the air; failures recover themselves.
 <img src="assets/divider.svg" width="100%" alt="" />
 
 <!-- ========================================================================= -->
+<!--  OPEN HARDWARE PARTS                                                      -->
+<!-- ========================================================================= -->
+
+<a name="hardware-parts"></a>
+
+## <img src="assets/logo.svg" width="26" align="top" alt="" />&nbsp; Open Hardware Parts
+
+<div align="center">
+  <a href="https://github.com/ElectroIoT/EasyEDA-3D-Parts">
+    <img src="https://raw.githubusercontent.com/ElectroIoT/EasyEDA-3D-Parts/main/assets/banner.svg" width="100%" alt="EasyEDA 3D Parts: 3D models, footprints and symbols" />
+  </a>
+</div>
+
+<table>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/ElectroIoT/EasyEDA-3D-Parts/tree/main/parts/BluePill-GD32F103C8T6"><img src="https://raw.githubusercontent.com/ElectroIoT/EasyEDA-3D-Parts/main/assets/bluepill_iso.jpg" width="100%" alt="Blue Pill 3D model" /></a>
+      <br /><b>Blue Pill (GD32F103C8T6 / STM32F103C8T6)</b><br />
+      3D model, 40-pad footprint, 40-pin symbol, EasyEDA Pro and KiCad files.
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/ElectroIoT/EasyEDA-3D-Parts/tree/main/parts/HLK-5M05"><img src="https://raw.githubusercontent.com/ElectroIoT/EasyEDA-3D-Parts/main/assets/hlk5m05_iso.jpg" width="100%" alt="HLK-5M05 3D model" /></a>
+      <br /><b>Hi-Link HLK-5M05 (5 V AC-DC module)</b><br />
+      3D model with real pin positions and height, footprint, symbol.
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="https://github.com/ElectroIoT/EasyEDA-3D-Parts">
+    <img src="https://img.shields.io/badge/PARTS-EasyEDA--3D--Parts-00C8FF?style=for-the-badge&labelColor=050816&logo=github&logoColor=00FFD5" alt="EasyEDA 3D Parts repository" />
+  </a>
+  <a href="https://oshwlab.com/manoranjan2050/project_txmignpw">
+    <img src="https://img.shields.io/badge/OSHWLAB-Blue%20Pill%20kit-0066FF?style=for-the-badge&labelColor=050816" alt="OSHWLab project" />
+  </a>
+  <a href="https://github.com/ElectroIoT/Smart-Bathroom-Light-Fan-Controller-GD32">
+    <img src="https://img.shields.io/badge/PROJECT-Bathroom%20light%20%2B%20fan%20controller-00FFD5?style=for-the-badge&labelColor=050816" alt="Bathroom light and fan controller" />
+  </a>
+</p>
+
+<p align="center"><sub>Free to use with credit (CC BY 4.0). New parts are added to the same repository as they are made.</sub></p>
+
+<img src="assets/divider.svg" width="100%" alt="" />
+
+<!-- ========================================================================= -->
 <!--  OPEN SOURCE                                                              -->
+
 <!-- ========================================================================= -->
 
 <a name="open-source"></a>
