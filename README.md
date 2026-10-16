@@ -865,6 +865,9 @@ portal; updates arrive over the air; failures recover themselves.
   <a href="https://oshwlab.com/manoranjan2050/project_txmignpw">
     <img src="https://img.shields.io/badge/OSHWLAB-Blue%20Pill%20kit-0066FF?style=for-the-badge&labelColor=050816" alt="OSHWLab project" />
   </a>
+  <a href="https://oshwlab.com/manoranjan2050/project_iezpugsw">
+    <img src="https://img.shields.io/badge/OSHWLAB-HLK--5M05%20kit-0066FF?style=for-the-badge&labelColor=050816" alt="HLK-5M05 OSHWLab project" />
+  </a>
   <a href="https://github.com/ElectroIoT/Smart-Bathroom-Light-Fan-Controller-GD32">
     <img src="https://img.shields.io/badge/PROJECT-Bathroom%20light%20%2B%20fan%20controller-00FFD5?style=for-the-badge&labelColor=050816" alt="Bathroom light and fan controller" />
   </a>
