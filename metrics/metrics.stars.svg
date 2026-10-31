@@ -182,7 +182,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>ElectroIoT/Smart-Bathroom-Light-Fan-Controller-GD32</span>
-                                        <span>starred 18 days ago</span>
+                                        <span>starred 19 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Smart bathroom light + exhaust fan controller using GD32F103C8T6 and a PIR sensor: two independent non-blocking timers (7 min light, 10 min fan), relay control, C firmware, unit tests, wiring docs.</div>
