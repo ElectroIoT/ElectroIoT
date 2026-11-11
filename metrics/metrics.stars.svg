@@ -23,7 +23,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>ElectroIoT/ESP32-S3-TankPilot</span>
-                                        <span>starred 12 hours ago</span>
+                                        <span>starred 22 hours ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Know your water tank level in percent, and let Home Assistant start the pump before the tank runs dry. One small ESP32-C3 board, three kinds of level sensors, automatic fallback</div>
@@ -129,7 +129,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>ElectroIoT/luckfox-ai</span>
-                                        <span>starred 11 days ago</span>
+                                        <span>starred 12 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">AI vision platform for the Luckfox Pico Pro (RV1106): camera, RTSP, NPU detection, dashboard. Work in progress.</div>
@@ -182,7 +182,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>ElectroIoT/Restaurant-Calling-Bell</span>
-                                        <span>starred 11 days ago</span>
+                                        <span>starred 12 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Open-source SI24R1 wireless restaurant calling bell: 10 coin-cell table remotes + OLED/DFPlayer voice receiver (ATmega328P)</div>
