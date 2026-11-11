@@ -23,7 +23,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>ElectroIoT/ESP32-S3-TankPilot</span>
-                                        <span>starred 22 hours ago</span>
+                                        <span>starred 1 day ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Know your water tank level in percent, and let Home Assistant start the pump before the tank runs dry. One small ESP32-C3 board, three kinds of level sensors, automatic fallback</div>
@@ -76,7 +76,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>WARMW00D/ESP32-S3-PrintServer</span>
-                                        <span>starred 7 days ago</span>
+                                        <span>starred 8 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Turn a plain USB printer into a WiFi network printer using an ESP32-S3 as a USB Host bridge — no Raspberry Pi, no dedicated PC required.</div>
